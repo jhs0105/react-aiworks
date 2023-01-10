@@ -25,10 +25,13 @@ function Project() {
   console.log(active);
   return (
     <Wrapper>
-      <h2>지금, 워키를 위한 프로젝트를 시작하세요</h2>
-      <div className="more">
-        <i className="fa-solid fa-plus"></i> 더보기
+      <div className="txt">
+        <h2>지금, 워키를 위한 프로젝트를 시작하세요</h2>
+        <button className="more">
+          <i className="fa-solid fa-plus"></i> 더보기
+        </button>
       </div>
+
       <div className="keyword">
         {active.map((item, idx) => (
           <button
@@ -50,7 +53,7 @@ function Project() {
       </div>
       <Swiper
         slidesPerView={4}
-        spaceBetween={20}
+        spaceBetween={30}
         loop={true}
         modules={[Autoplay, Navigation]}
         autoplay={{ delay: 2000 }}
@@ -87,20 +90,24 @@ function Project() {
 const Wrapper = styled.div`
   width: 80%;
   margin: 0 auto;
-  padding: 50px 5px;
+  padding: 50px 0;
   box-sizing: border-box;
   position: relative;
+  .txt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      font-weight: bold;
+      font-size: 28px;
+    }
+    .more {
+      font-size: 17px;
+      font-weight: bold;
+      padding: 0;
+    }
+  }
 
-  h2 {
-    font-weight: bold;
-    font-size: 28px;
-  }
-  .more {
-    margin-top: -50px;
-    text-align: right;
-    font-size: 17px;
-    font-weight: bold;
-  }
   .keyword {
     display: flex;
     margin: 50px 0 20px;
@@ -144,7 +151,7 @@ const Wrapper = styled.div`
       position: relative;
       &:before {
         content: "";
-        background-color: rgba(1, 1, 1, 0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         width: 100%;
         height: 100%;
         position: absolute;
