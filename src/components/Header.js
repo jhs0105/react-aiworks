@@ -72,6 +72,7 @@ const Headers = styled.header`
   height: 100px;
   overflow: hidden;
   z-index: 99;
+  font-size: 17px;
   &.on {
     height: 300px;
     background-color: #fff;
@@ -90,16 +91,17 @@ const Headers = styled.header`
       > ul {
         display: flex;
         .depth01 {
-          width: 180px;
+          width: 170px;
           height: 100px;
           //background-color: pink;
           display: flex;
           align-items: center;
           justify-content: center;
+          font-weight: bold;
         }
         .depth02 {
           padding: 10px 0;
-          font-size: 17px;
+          font-size: 15px;
           li {
             display: flex;
             align-items: center;

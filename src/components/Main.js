@@ -4,6 +4,7 @@ import Box from "./Box";
 import Class from "./Class";
 import MainSlide from "./MainSlide";
 import Project from "./Project";
+import WithUs from "./WithUs";
 
 function Main() {
   return (
@@ -13,6 +14,7 @@ function Main() {
       <Apply></Apply>
       <Box></Box>
       <Class></Class>
+      <WithUs></WithUs>
     </>
   );
 }
