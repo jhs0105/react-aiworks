@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { withData } from "../assets/data/with";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -13,8 +13,10 @@ function WithUs() {
       <Swiper
         slidesPerView={6}
         slidesPerGroup={6}
-        modules={[Pagination]}
+        modules={[Autoplay, Pagination]}
         pagination={{ clickable: true }}
+        autoplay={{ delay: 2000 }}
+        loop={true}
       >
         {withData.map((item, idx) => {
           return (
@@ -38,6 +40,16 @@ const Wrapper = styled.div`
   .swiper-pagination {
     text-align: right;
     bottom: 0px;
+    &-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: rgba(1, 1, 1, 0.7);
+      &-active {
+        width: 40px;
+        border-radius: 40px;
+        transition: all 0.25s ease;
+      }
+    }
   }
 `;
 export default WithUs;

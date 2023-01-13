@@ -12,7 +12,6 @@ function Footer() {
             <li>회사소개</li>
             <li>이용약관</li>
             <li>
-              개인정보처리방침
               <strong>개인정보처리방침</strong>
             </li>
             <li>데이터바우처 지원사업</li>

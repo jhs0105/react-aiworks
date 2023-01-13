@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "../images/logo.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 function Header() {
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     document.getElementById("header").classList.add("color");
+  //   });
+  // }, []);
   return (
     <Headers id="header">
       <div className="container">
@@ -73,10 +78,13 @@ const Headers = styled.header`
   overflow: hidden;
   z-index: 99;
   font-size: 17px;
+  background-color: #fff;
   &.on {
     height: 300px;
     background-color: #fff;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
   }
+
   .container {
     margin: 0 auto;
     width: 80%;
@@ -98,15 +106,22 @@ const Headers = styled.header`
           align-items: center;
           justify-content: center;
           font-weight: bold;
+          &:hover {
+            color: #8755f1;
+          }
         }
         .depth02 {
           padding: 10px 0;
           font-size: 15px;
+          cursor: pointer;
           li {
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 10px 0;
+            &:hover {
+              color: #8755f1;
+            }
           }
         }
       }
